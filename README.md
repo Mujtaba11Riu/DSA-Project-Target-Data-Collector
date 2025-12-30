@@ -1,34 +1,64 @@
-Target Data Collector
-Project Overview
+name: Target Data Collector
 
-Target Data Collector is a simple Data Management System implemented using Binary Search Tree (BST) in C++. This system allows users to store, search, display, and remove personal information of individuals efficiently. It is designed to manage records such as name, age, and address, providing an organized and structured way to handle data.
+description: >
+  Target Data Collector is a C++ console-based Data Management System 
+  using a Binary Search Tree (BST) to efficiently store, search, 
+  and manage personal information of individuals. Designed for tracking, 
+  referencing, and analyzing user data in an organized manner.
 
-Purpose: This project can be used for reference, tracking, or analysis of personal data in a controlled environment, simulating the management of user information in a secure and efficient way.
+features:
+  - Insert Records: Add new individuals with Name, Age, and Address
+  - Search Records: Quickly search for a person by name
+  - Display Records: Show all records in sorted order using inorder traversal
+  - Remove Records: Safely remove a person handling leaf, one-child, and two-children nodes
+  - Duplicate Prevention: Ensures no two entries share the same name
 
-Features
+technology:
+  - C++
+  - Binary Search Tree (BST)
+  - Console-based interface
 
-Store individual records with Name, Age, and Address
+project_structure: |
+  Target-Data-Collector/
+    ├── Person.h         # Struct for storing personal info
+    ├── TreeNode.h       # Node class for BST
+    ├── Tree.h           # BST class with all operations
+    ├── Tree.cpp         # Implementation of BST operations
+    └── main.cpp         # Demo usage & testing
 
-Insert new records without duplicates
+usage:
+  steps:
+    - Clone the repository: git clone <repo-url>
+    - Compile the code: g++ main.cpp Tree.cpp -o TargetDataCollector
+    - Run the program: ./TargetDataCollector
+    - Insert, search, display, or delete user records through console menu
 
-Search for records by Name
+sample_output: |
+  Inorder Traversal:
+  Name: Ali
+  Age: 22
+  Address: Islamabad
 
-Display all records in sorted order using inorder traversal
+  Name: Ahmed
+  Age: 25
+  Address: Lahore
 
-Remove a record with proper handling of:
+  Name: Zain
+  Age: 21
+  Address: Karachi
 
-Leaf nodes
+  Searching Ahmed:
+  Found
 
-Nodes with one child
+  Searching Faizan:
+  Not Found
 
-Nodes with two children
+notes:
+  - Data is stored in memory and not in external files
+  - Designed for learning and simulation purposes
+  - Prevents duplicate names to maintain data integrity
 
-Technologies Used
-
-C++ for programming
-
-Binary Search Tree (BST) data structure
-
-Console-based interface (CLI)
-
-Header and CPP file structure for modular code
+cyber_security_relevance: >
+  Demonstrates organized data storage, search, and access control. 
+  Efficiently managing personal information while ensuring proper handling 
+  and retrieval simulates real-world secure data management practices.
